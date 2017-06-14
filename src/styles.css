@@ -1,0 +1,119 @@
+/* You can add global styles to this file, and also import other style files */
+/* We importeren een extra font */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600');
+@import url('https://fonts.googleapis.com/css?family=Alice');
+
+
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  font-family: 'Open Sans', Arial, sans-serif;
+  background-color: #3b5249;
+}
+
+h1 {
+   color: white;
+   text-transform: uppercase;
+   font-size: 42px;
+   margin-bottom: 0;
+ }
+
+h2 {
+  font-family: 'Alice', serif;
+  font-weight: 700;
+  color: white;
+  margin-top: 0;
+  font-size: 28px;
+}
+
+/* De container van het hele geheel, ook om het uit te centeren op het scherm */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1140px;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.search__wrapper {
+  display: flex;
+  margin-top: 20px;
+}
+
+.search__input {
+  flex: 3 0 300px;
+  height: 50px;
+  border: none;
+  padding-left: 10px;
+  background-color: #C9C9C9;
+}
+
+.search__button {
+  flex: 1 0 100px;
+  border: none;
+  height: 100%;
+  background-color: #7b7b7b;
+  color: white;
+  font-weight: bold;
+}
+
+.search__infotext {
+  font-family: 'Alice', serif;
+  font-size: 18px;
+  color: white;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.search__infotext span {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+
+.result {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.result__show {
+  display: flex;
+  margin-top: 20px;
+  width: 50%;
+  flex-direction: row;
+  background-color: #EDEDED;
+  max-height: 300px;
+}
+
+.result__image img {
+  max-height: 300px;
+}
+
+.result__info {
+  padding: 10px;
+}
+
+.result__text {
+  max-height: 210px;
+  overflow: hidden;
+}

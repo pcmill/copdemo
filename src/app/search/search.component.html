@@ -1,0 +1,27 @@
+<div class="search">
+  <h1>Search</h1>
+  <h2>and get TV Show recommendations</h2>
+  <div class="search__wrapper">
+    <input type="text" name="searchterm" class="search__input" placeholder="Searchterm" #searchterm>
+    <input type="submit" value="Give recommendation" class="search__button" (click)="search(searchterm.value)">
+  </div>
+</div>
+
+<div *ngIf="loading">
+  <p class="search__infotext">Loading</p>
+</div>
+
+<div *ngIf="resultsAmount === 0 && !loading">
+  <p class="search__infotext">No shows found!</p>
+</div>
+
+<div *ngIf="results.length > 0 && !loading">
+  <p class="search__infotext">Showing results for: <span>{{searchedFor}}</span></p>
+
+  <div class="row">
+    <div class="result">
+      <app-result [@result]="result.length > 0" *ngFor="let result of results" [resultname]="result.name" [resultimage]="result.poster_path" [resulttext]="result.overview" class="result__show"></app-result>
+    </div>
+  </div>
+</div>
+
